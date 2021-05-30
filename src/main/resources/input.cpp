@@ -3,10 +3,10 @@ int main(){
    cout << a;
    a = 3;
    cout << a;
-   a = a + 1;
-   int g = 3;
+   a = a + 56;
+   long long g = 3;
 
-   int b = a + g;
+   short b = a + g;
    cout << b;
    if (b < 1) {
        cout << 100 * 2;

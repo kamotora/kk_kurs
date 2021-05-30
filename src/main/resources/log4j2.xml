@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="info" strict="true"
-               name="XMLConfigTest" packages="org.apache.logging.log4j.test">
-    <Filter type="ThresholdFilter" level="trace" />
-
+<Configuration status="OFF">
     <Appenders>
-        <Console name="STDOUT">
-            <Layout type="PatternLayout" pattern="%m %n" />
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{%-5level: %msg%n%throwable}" />
         </Console>
     </Appenders>
-
     <Loggers>
-        <Root level="INFO">
-            <AppenderRef ref="STDOUT" />
+        <Root level="TRACE">
+            <AppenderRef ref="Console" />
         </Root>
     </Loggers>
-
 </Configuration>

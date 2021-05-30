@@ -4,12 +4,8 @@ import java.math.BigInteger;
 
 public class Node {
 
-    private TypeLexeme typeLexeme;
-    private String text;
-
-    public Node(TypeLexeme typeLexeme) {
-        this.typeLexeme = typeLexeme;
-    }
+    private final TypeLexeme typeLexeme;
+    private final String text;
 
     public Node(TypeLexeme type, String text) {
         this.typeLexeme = type;

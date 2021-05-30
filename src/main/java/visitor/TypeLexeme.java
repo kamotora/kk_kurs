@@ -11,10 +11,10 @@ import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
 
 public enum TypeLexeme {
-    SHORT(asList("short", "short int"), 0),
+    SHORT(asList("short", "shortint"), 0),
     INT(singletonList("int"), 1),
-    LONG(asList("long", "long int"), 2),
-    LONG_LONG(asList("long long", "long long int"), 3),
+    LONG(asList("long", "longint"), 2),
+    LONG_LONG(asList("longlong", "longlongint"), 3),
     VOID(singletonList("void"), -1),
     UNKNOWN(emptyList(), -2);
 

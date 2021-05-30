@@ -1,8 +1,6 @@
 package visitor;
 
 
-import gen.antlr.CPP14BaseVisitor;
-import gen.antlr.CPP14Parser;
 import lombok.extern.log4j.Log4j2;
 import org.antlr.v4.runtime.tree.ParseTree;
 
@@ -10,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Log4j2
-public class MyVisitor extends CPP14BaseVisitor<Node> {
+public class Visitor extends CPP14ParserBaseVisitor<Node> {
 
     private final Map<String, Node> vars = new HashMap<>();
     private String type;
@@ -21,11 +19,11 @@ public class MyVisitor extends CPP14BaseVisitor<Node> {
     private static final Node falseNode = new Node(TypeLexeme.INT, FALSE);
 
     @Override
-    public Node visitShiftexpression(CPP14Parser.ShiftexpressionContext ctx) {
+    public Node visitShiftExpression(CPP14Parser.ShiftExpressionContext ctx) {
         if (ctx.getChildCount() > 1) {
             log.info(super.visit(ctx.getChild(2)).getText());
         }
-        return super.visitShiftexpression(ctx);
+        return super.visitShiftExpression(ctx);
     }
 
     @Override
@@ -34,13 +32,13 @@ public class MyVisitor extends CPP14BaseVisitor<Node> {
     }
 
     @Override
-    public Node visitSimpledeclaration(CPP14Parser.SimpledeclarationContext ctx) {
+    public Node visitSimpleDeclaration(CPP14Parser.SimpleDeclarationContext ctx) {
         type = ctx.getChild(0).getText();
-        return super.visitSimpledeclaration(ctx);
+        return super.visitSimpleDeclaration(ctx);
     }
 
     @Override
-    public Node visitInitdeclarator(CPP14Parser.InitdeclaratorContext ctx) {
+    public Node visitInitDeclarator(CPP14Parser.InitDeclaratorContext ctx) {
         String value = "0";
         String name = ctx.getChild(0).getText();
         if (ctx.getChildCount() > 1) {
@@ -57,19 +55,11 @@ public class MyVisitor extends CPP14BaseVisitor<Node> {
         } else {
             log.error("Переменная {} уже определена!", name);
         }
-        return super.visitInitdeclarator(ctx);
+        return super.visitInitDeclarator(ctx);
     }
 
     @Override
-    public Node visitSelectionstatement(CPP14Parser.SelectionstatementContext ctx) {
-//        if (DEBUG) {
-//            log.info("visitSelectionstatement");
-//            for (int i = 0; i < ctx.children.size(); i++) {
-//                String tmp = ctx.getChild(i).getText();
-//                log.info(tmp);
-//            }
-//            log.info("#########################");
-//        }
+    public Node visitSelectionStatement(CPP14Parser.SelectionStatementContext ctx) {
         int count = ctx.getChildCount();
         try {
             if (count == 5) {
@@ -98,15 +88,15 @@ public class MyVisitor extends CPP14BaseVisitor<Node> {
 
 
     @Override
-    public Node visitIdexpression(CPP14Parser.IdexpressionContext ctx) {
+    public Node visitIdExpression(CPP14Parser.IdExpressionContext ctx) {
         if (vars.get(ctx.getText()) != null) {
             return vars.get(ctx.getText());
         }
-        return super.visitIdexpression(ctx);
+        return super.visitIdExpression(ctx);
     }
 
     @Override
-    public Node visitAdditiveexpression(CPP14Parser.AdditiveexpressionContext ctx) {
+    public Node visitAdditiveExpression(CPP14Parser.AdditiveExpressionContext ctx) {
         if (ctx.getChildCount() == 1) {
             return super.visit(ctx.getChild(0));
         } else {
@@ -121,7 +111,7 @@ public class MyVisitor extends CPP14BaseVisitor<Node> {
     }
 
     @Override
-    public Node visitMultiplicativeexpression(CPP14Parser.MultiplicativeexpressionContext ctx) {
+    public Node visitMultiplicativeExpression(CPP14Parser.MultiplicativeExpressionContext ctx) {
         if (ctx.getChildCount() == 1) {
             return super.visit(ctx.getChild(0));
         } else {
@@ -136,7 +126,7 @@ public class MyVisitor extends CPP14BaseVisitor<Node> {
     }
 
     @Override
-    public Node visitRelationalexpression(CPP14Parser.RelationalexpressionContext ctx) {
+    public Node visitRelationalExpression(CPP14Parser.RelationalExpressionContext ctx) {
         if (ctx.getChildCount() > 1) {
             Node a = super.visit(ctx.getChild(0));
             Node b = super.visit(ctx.getChild(2));
@@ -151,11 +141,11 @@ public class MyVisitor extends CPP14BaseVisitor<Node> {
                     return a.less(b) ? trueNode : falseNode;
             }
         }
-        return super.visitRelationalexpression(ctx);
+        return super.visitRelationalExpression(ctx);
     }
 
     @Override
-    public Node visitEqualityexpression(CPP14Parser.EqualityexpressionContext ctx) {
+    public Node visitEqualityExpression(CPP14Parser.EqualityExpressionContext ctx) {
         if (ctx.getChildCount() > 1) {
             ParseTree a = ctx.getChild(0);
             ParseTree b = ctx.getChild(2);
@@ -166,11 +156,11 @@ public class MyVisitor extends CPP14BaseVisitor<Node> {
                     return super.visit(a).notEqual(super.visit(b)) ? trueNode : falseNode;
             }
         }
-        return super.visitEqualityexpression(ctx);
+        return super.visitEqualityExpression(ctx);
     }
 
     @Override
-    public Node visitAssignmentexpression(CPP14Parser.AssignmentexpressionContext ctx) {
+    public Node visitAssignmentExpression(CPP14Parser.AssignmentExpressionContext ctx) {
         if (ctx.getChildCount() > 1) {
             String name = ctx.getChild(0).getText();
             Node node = super.visit(ctx.getChild(2));
@@ -181,7 +171,7 @@ public class MyVisitor extends CPP14BaseVisitor<Node> {
             }
             return node;
         } else {
-            return super.visitAssignmentexpression(ctx);
+            return super.visitAssignmentExpression(ctx);
         }
     }
 }
