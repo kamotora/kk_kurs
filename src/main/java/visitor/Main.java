@@ -14,7 +14,7 @@ public class Main {
         CPP14Lexer lexer = new CPP14Lexer(CharStreams.fromString(reader.fromFile("input.cpp")));
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         CPP14Parser parser = new CPP14Parser(tokens);
-        ParseTree tree = parser.translationUnit();
+        ParseTree tree = parser.translationunit();
         new Visitor().visit(tree);
     }
 }

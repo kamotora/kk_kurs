@@ -1,93 +1,93 @@
-// Generated from D:/KK/kurs/src/main/java/antlr\CPP14Parser.g4 by ANTLR 4.9.1
+// Generated from D:/KK/kurs/src/main/java/antlr\CPP14.g4 by ANTLR 4.9.1
 package antlr;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
- * This class provides an empty implementation of {@link CPP14ParserVisitor},
+ * This class provides an empty implementation of {@link CPP14Visitor},
  * which can be extended to create a visitor which only needs to handle a subset
  * of the available methods.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
  * operations with no return type.
  */
-public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements CPP14ParserVisitor<T> {
+public class CPP14BaseVisitor<T> extends AbstractParseTreeVisitor<T> implements CPP14Visitor<T> {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTranslationUnit(CPP14Parser.TranslationUnitContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTranslationunit(CPP14Parser.TranslationunitContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPrimaryExpression(CPP14Parser.PrimaryExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPrimaryexpression(CPP14Parser.PrimaryexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIdExpression(CPP14Parser.IdExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIdexpression(CPP14Parser.IdexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUnqualifiedId(CPP14Parser.UnqualifiedIdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitUnqualifiedid(CPP14Parser.UnqualifiedidContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitQualifiedId(CPP14Parser.QualifiedIdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitQualifiedid(CPP14Parser.QualifiedidContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNestedNameSpecifier(CPP14Parser.NestedNameSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNestednamespecifier(CPP14Parser.NestednamespecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLambdaExpression(CPP14Parser.LambdaExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLambdaexpression(CPP14Parser.LambdaexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLambdaIntroducer(CPP14Parser.LambdaIntroducerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLambdaintroducer(CPP14Parser.LambdaintroducerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLambdaCapture(CPP14Parser.LambdaCaptureContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLambdacapture(CPP14Parser.LambdacaptureContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCaptureDefault(CPP14Parser.CaptureDefaultContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCapturedefault(CPP14Parser.CapturedefaultContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCaptureList(CPP14Parser.CaptureListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCapturelist(CPP14Parser.CapturelistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -101,7 +101,7 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSimpleCapture(CPP14Parser.SimpleCaptureContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSimplecapture(CPP14Parser.SimplecaptureContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -115,217 +115,224 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLambdaDeclarator(CPP14Parser.LambdaDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLambdadeclarator(CPP14Parser.LambdadeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPostfixExpression(CPP14Parser.PostfixExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPostfixexpression(CPP14Parser.PostfixexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeIdOfTheTypeId(CPP14Parser.TypeIdOfTheTypeIdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeidofexpr(CPP14Parser.TypeidofexprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpressionList(CPP14Parser.ExpressionListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeidofthetypeid(CPP14Parser.TypeidofthetypeidContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPseudoDestructorName(CPP14Parser.PseudoDestructorNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpressionlist(CPP14Parser.ExpressionlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUnaryExpression(CPP14Parser.UnaryExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPseudodestructorname(CPP14Parser.PseudodestructornameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUnaryOperator(CPP14Parser.UnaryOperatorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitUnaryexpression(CPP14Parser.UnaryexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNewExpression(CPP14Parser.NewExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitUnaryoperator(CPP14Parser.UnaryoperatorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNewPlacement(CPP14Parser.NewPlacementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNewexpression(CPP14Parser.NewexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNewTypeId(CPP14Parser.NewTypeIdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNewplacement(CPP14Parser.NewplacementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNewDeclarator(CPP14Parser.NewDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNewtypeid(CPP14Parser.NewtypeidContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNoPointerNewDeclarator(CPP14Parser.NoPointerNewDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNewdeclarator(CPP14Parser.NewdeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNewInitializer(CPP14Parser.NewInitializerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNoptrnewdeclarator(CPP14Parser.NoptrnewdeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDeleteExpression(CPP14Parser.DeleteExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNewinitializer(CPP14Parser.NewinitializerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNoExceptExpression(CPP14Parser.NoExceptExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDeleteexpression(CPP14Parser.DeleteexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCastExpression(CPP14Parser.CastExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNoexceptexpression(CPP14Parser.NoexceptexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPointerMemberExpression(CPP14Parser.PointerMemberExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCastexpression(CPP14Parser.CastexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMultiplicativeExpression(CPP14Parser.MultiplicativeExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPmexpression(CPP14Parser.PmexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAdditiveExpression(CPP14Parser.AdditiveExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMultiplicativeexpression(CPP14Parser.MultiplicativeexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitShiftExpression(CPP14Parser.ShiftExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAdditiveexpression(CPP14Parser.AdditiveexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitShiftOperator(CPP14Parser.ShiftOperatorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitShiftexpression(CPP14Parser.ShiftexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitRelationalExpression(CPP14Parser.RelationalExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitShiftoperator(CPP14Parser.ShiftoperatorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEqualityExpression(CPP14Parser.EqualityExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitRelationalexpression(CPP14Parser.RelationalexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAndExpression(CPP14Parser.AndExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEqualityexpression(CPP14Parser.EqualityexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExclusiveOrExpression(CPP14Parser.ExclusiveOrExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAndexpression(CPP14Parser.AndexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInclusiveOrExpression(CPP14Parser.InclusiveOrExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExclusiveorexpression(CPP14Parser.ExclusiveorexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLogicalAndExpression(CPP14Parser.LogicalAndExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInclusiveorexpression(CPP14Parser.InclusiveorexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLogicalOrExpression(CPP14Parser.LogicalOrExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLogicalandexpression(CPP14Parser.LogicalandexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitConditionalExpression(CPP14Parser.ConditionalExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLogicalorexpression(CPP14Parser.LogicalorexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssignmentExpression(CPP14Parser.AssignmentExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitConditionalexpression(CPP14Parser.ConditionalexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssignmentOperator(CPP14Parser.AssignmentOperatorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAssignmentexpression(CPP14Parser.AssignmentexpressionContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitAssignmentoperator(CPP14Parser.AssignmentoperatorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -339,7 +346,7 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitConstantExpression(CPP14Parser.ConstantExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitConstantexpression(CPP14Parser.ConstantexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -353,35 +360,35 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLabeledStatement(CPP14Parser.LabeledStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLabeledstatement(CPP14Parser.LabeledstatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpressionStatement(CPP14Parser.ExpressionStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpressionstatement(CPP14Parser.ExpressionstatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCompoundStatement(CPP14Parser.CompoundStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCompoundstatement(CPP14Parser.CompoundstatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStatementSeq(CPP14Parser.StatementSeqContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStatementseq(CPP14Parser.StatementseqContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSelectionStatement(CPP14Parser.SelectionStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSelectionstatement(CPP14Parser.SelectionstatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -395,42 +402,42 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIterationStatement(CPP14Parser.IterationStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIterationstatement(CPP14Parser.IterationstatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitForInitStatement(CPP14Parser.ForInitStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitForinitstatement(CPP14Parser.ForinitstatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitForRangeDeclaration(CPP14Parser.ForRangeDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitForrangedeclaration(CPP14Parser.ForrangedeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitForRangeInitializer(CPP14Parser.ForRangeInitializerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitForrangeinitializer(CPP14Parser.ForrangeinitializerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitJumpStatement(CPP14Parser.JumpStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitJumpstatement(CPP14Parser.JumpstatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDeclarationStatement(CPP14Parser.DeclarationStatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDeclarationstatement(CPP14Parser.DeclarationstatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -451,175 +458,161 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBlockDeclaration(CPP14Parser.BlockDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBlockdeclaration(CPP14Parser.BlockdeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAliasDeclaration(CPP14Parser.AliasDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAliasdeclaration(CPP14Parser.AliasdeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSimpleDeclaration(CPP14Parser.SimpleDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSimpledeclaration(CPP14Parser.SimpledeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStaticAssertDeclaration(CPP14Parser.StaticAssertDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStatic_assertdeclaration(CPP14Parser.Static_assertdeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEmptyDeclaration(CPP14Parser.EmptyDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEmptydeclaration(CPP14Parser.EmptydeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeDeclaration(CPP14Parser.AttributeDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributedeclaration(CPP14Parser.AttributedeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDeclSpecifier(CPP14Parser.DeclSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDeclspecifier(CPP14Parser.DeclspecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDeclSpecifierSeq(CPP14Parser.DeclSpecifierSeqContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDeclspecifierseq(CPP14Parser.DeclspecifierseqContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStorageClassSpecifier(CPP14Parser.StorageClassSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStorageclassspecifier(CPP14Parser.StorageclassspecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFunctionSpecifier(CPP14Parser.FunctionSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFunctionspecifier(CPP14Parser.FunctionspecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypedefName(CPP14Parser.TypedefNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypedefname(CPP14Parser.TypedefnameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeSpecifier(CPP14Parser.TypeSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypespecifier(CPP14Parser.TypespecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTrailingTypeSpecifier(CPP14Parser.TrailingTypeSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTrailingtypespecifier(CPP14Parser.TrailingtypespecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeSpecifierSeq(CPP14Parser.TypeSpecifierSeqContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypespecifierseq(CPP14Parser.TypespecifierseqContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTrailingTypeSpecifierSeq(CPP14Parser.TrailingTypeSpecifierSeqContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTrailingtypespecifierseq(CPP14Parser.TrailingtypespecifierseqContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSimpleTypeLengthModifier(CPP14Parser.SimpleTypeLengthModifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSimpletypespecifier(CPP14Parser.SimpletypespecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSimpleTypeSignednessModifier(CPP14Parser.SimpleTypeSignednessModifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitThetypename(CPP14Parser.ThetypenameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSimpleTypeSpecifier(CPP14Parser.SimpleTypeSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDecltypespecifier(CPP14Parser.DecltypespecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTheTypeName(CPP14Parser.TheTypeNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitElaboratedtypespecifier(CPP14Parser.ElaboratedtypespecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDecltypeSpecifier(CPP14Parser.DecltypeSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumname(CPP14Parser.EnumnameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitElaboratedTypeSpecifier(CPP14Parser.ElaboratedTypeSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumspecifier(CPP14Parser.EnumspecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnumName(CPP14Parser.EnumNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumhead(CPP14Parser.EnumheadContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnumSpecifier(CPP14Parser.EnumSpecifierContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitEnumHead(CPP14Parser.EnumHeadContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitOpaqueEnumDeclaration(CPP14Parser.OpaqueEnumDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitOpaqueenumdeclaration(CPP14Parser.OpaqueenumdeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -640,14 +633,14 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnumeratorList(CPP14Parser.EnumeratorListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumeratorlist(CPP14Parser.EnumeratorlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnumeratorDefinition(CPP14Parser.EnumeratorDefinitionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumeratordefinition(CPP14Parser.EnumeratordefinitionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -661,35 +654,70 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNamespaceName(CPP14Parser.NamespaceNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNamespacename(CPP14Parser.NamespacenameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitOriginalNamespaceName(CPP14Parser.OriginalNamespaceNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitOriginalnamespacename(CPP14Parser.OriginalnamespacenameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNamespaceDefinition(CPP14Parser.NamespaceDefinitionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNamespacedefinition(CPP14Parser.NamespacedefinitionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNamespaceAlias(CPP14Parser.NamespaceAliasContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNamednamespacedefinition(CPP14Parser.NamednamespacedefinitionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNamespaceAliasDefinition(CPP14Parser.NamespaceAliasDefinitionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitOriginalnamespacedefinition(CPP14Parser.OriginalnamespacedefinitionContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitExtensionnamespacedefinition(CPP14Parser.ExtensionnamespacedefinitionContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitUnnamednamespacedefinition(CPP14Parser.UnnamednamespacedefinitionContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitNamespacebody(CPP14Parser.NamespacebodyContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitNamespacealias(CPP14Parser.NamespacealiasContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitNamespacealiasdefinition(CPP14Parser.NamespacealiasdefinitionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -703,42 +731,42 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUsingDeclaration(CPP14Parser.UsingDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitUsingdeclaration(CPP14Parser.UsingdeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUsingDirective(CPP14Parser.UsingDirectiveContext ctx) { return visitChildren(ctx); }
+	@Override public T visitUsingdirective(CPP14Parser.UsingdirectiveContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAsmDefinition(CPP14Parser.AsmDefinitionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAsmdefinition(CPP14Parser.AsmdefinitionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLinkageSpecification(CPP14Parser.LinkageSpecificationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLinkagespecification(CPP14Parser.LinkagespecificationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeSpecifierSeq(CPP14Parser.AttributeSpecifierSeqContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributespecifierseq(CPP14Parser.AttributespecifierseqContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeSpecifier(CPP14Parser.AttributeSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributespecifier(CPP14Parser.AttributespecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -752,7 +780,7 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeList(CPP14Parser.AttributeListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributelist(CPP14Parser.AttributelistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -766,21 +794,35 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeNamespace(CPP14Parser.AttributeNamespaceContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributetoken(CPP14Parser.AttributetokenContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAttributeArgumentClause(CPP14Parser.AttributeArgumentClauseContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributescopedtoken(CPP14Parser.AttributescopedtokenContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBalancedTokenSeq(CPP14Parser.BalancedTokenSeqContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAttributenamespace(CPP14Parser.AttributenamespaceContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitAttributeargumentclause(CPP14Parser.AttributeargumentclauseContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitBalancedtokenseq(CPP14Parser.BalancedtokenseqContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -794,14 +836,14 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInitDeclaratorList(CPP14Parser.InitDeclaratorListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitdeclaratorlist(CPP14Parser.InitdeclaratorlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInitDeclarator(CPP14Parser.InitDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitdeclarator(CPP14Parser.InitdeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -815,35 +857,35 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPointerDeclarator(CPP14Parser.PointerDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPtrdeclarator(CPP14Parser.PtrdeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNoPointerDeclarator(CPP14Parser.NoPointerDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNoptrdeclarator(CPP14Parser.NoptrdeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParametersAndQualifiers(CPP14Parser.ParametersAndQualifiersContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParametersandqualifiers(CPP14Parser.ParametersandqualifiersContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTrailingReturnType(CPP14Parser.TrailingReturnTypeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTrailingreturntype(CPP14Parser.TrailingreturntypeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPointerOperator(CPP14Parser.PointerOperatorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPtroperator(CPP14Parser.PtroperatorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -857,7 +899,7 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCvQualifier(CPP14Parser.CvQualifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCvqualifier(CPP14Parser.CvqualifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -878,77 +920,77 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTheTypeId(CPP14Parser.TheTypeIdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitThetypeid(CPP14Parser.ThetypeidContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAbstractDeclarator(CPP14Parser.AbstractDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAbstractdeclarator(CPP14Parser.AbstractdeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPointerAbstractDeclarator(CPP14Parser.PointerAbstractDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPtrabstractdeclarator(CPP14Parser.PtrabstractdeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNoPointerAbstractDeclarator(CPP14Parser.NoPointerAbstractDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNoptrabstractdeclarator(CPP14Parser.NoptrabstractdeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAbstractPackDeclarator(CPP14Parser.AbstractPackDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAbstractpackdeclarator(CPP14Parser.AbstractpackdeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNoPointerAbstractPackDeclarator(CPP14Parser.NoPointerAbstractPackDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNoptrabstractpackdeclarator(CPP14Parser.NoptrabstractpackdeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameterDeclarationClause(CPP14Parser.ParameterDeclarationClauseContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParameterdeclarationclause(CPP14Parser.ParameterdeclarationclauseContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameterDeclarationList(CPP14Parser.ParameterDeclarationListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParameterdeclarationlist(CPP14Parser.ParameterdeclarationlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameterDeclaration(CPP14Parser.ParameterDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParameterdeclaration(CPP14Parser.ParameterdeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFunctionDefinition(CPP14Parser.FunctionDefinitionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFunctiondefinition(CPP14Parser.FunctiondefinitionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFunctionBody(CPP14Parser.FunctionBodyContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFunctionbody(CPP14Parser.FunctionbodyContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -962,77 +1004,77 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBraceOrEqualInitializer(CPP14Parser.BraceOrEqualInitializerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBraceorequalinitializer(CPP14Parser.BraceorequalinitializerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInitializerClause(CPP14Parser.InitializerClauseContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitializerclause(CPP14Parser.InitializerclauseContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInitializerList(CPP14Parser.InitializerListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitializerlist(CPP14Parser.InitializerlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBracedInitList(CPP14Parser.BracedInitListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBracedinitlist(CPP14Parser.BracedinitlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitClassName(CPP14Parser.ClassNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitClassname(CPP14Parser.ClassnameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitClassSpecifier(CPP14Parser.ClassSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitClassspecifier(CPP14Parser.ClassspecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitClassHead(CPP14Parser.ClassHeadContext ctx) { return visitChildren(ctx); }
+	@Override public T visitClasshead(CPP14Parser.ClassheadContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitClassHeadName(CPP14Parser.ClassHeadNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitClassheadname(CPP14Parser.ClassheadnameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitClassVirtSpecifier(CPP14Parser.ClassVirtSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitClassvirtspecifier(CPP14Parser.ClassvirtspecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitClassKey(CPP14Parser.ClassKeyContext ctx) { return visitChildren(ctx); }
+	@Override public T visitClasskey(CPP14Parser.ClasskeyContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMemberSpecification(CPP14Parser.MemberSpecificationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMemberspecification(CPP14Parser.MemberspecificationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1046,119 +1088,119 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMemberDeclaratorList(CPP14Parser.MemberDeclaratorListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMemberdeclaratorlist(CPP14Parser.MemberdeclaratorlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMemberDeclarator(CPP14Parser.MemberDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMemberdeclarator(CPP14Parser.MemberdeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitVirtualSpecifierSeq(CPP14Parser.VirtualSpecifierSeqContext ctx) { return visitChildren(ctx); }
+	@Override public T visitVirtspecifierseq(CPP14Parser.VirtspecifierseqContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitVirtualSpecifier(CPP14Parser.VirtualSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitVirtspecifier(CPP14Parser.VirtspecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPureSpecifier(CPP14Parser.PureSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPurespecifier(CPP14Parser.PurespecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBaseClause(CPP14Parser.BaseClauseContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBaseclause(CPP14Parser.BaseclauseContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBaseSpecifierList(CPP14Parser.BaseSpecifierListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBasespecifierlist(CPP14Parser.BasespecifierlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBaseSpecifier(CPP14Parser.BaseSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBasespecifier(CPP14Parser.BasespecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitClassOrDeclType(CPP14Parser.ClassOrDeclTypeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitClassordecltype(CPP14Parser.ClassordecltypeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBaseTypeSpecifier(CPP14Parser.BaseTypeSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBasetypespecifier(CPP14Parser.BasetypespecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAccessSpecifier(CPP14Parser.AccessSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAccessspecifier(CPP14Parser.AccessspecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitConversionFunctionId(CPP14Parser.ConversionFunctionIdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitConversionfunctionid(CPP14Parser.ConversionfunctionidContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitConversionTypeId(CPP14Parser.ConversionTypeIdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitConversiontypeid(CPP14Parser.ConversiontypeidContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitConversionDeclarator(CPP14Parser.ConversionDeclaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitConversiondeclarator(CPP14Parser.ConversiondeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitConstructorInitializer(CPP14Parser.ConstructorInitializerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCtorinitializer(CPP14Parser.CtorinitializerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMemInitializerList(CPP14Parser.MemInitializerListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMeminitializerlist(CPP14Parser.MeminitializerlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMemInitializer(CPP14Parser.MemInitializerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMeminitializer(CPP14Parser.MeminitializerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1172,119 +1214,119 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitOperatorFunctionId(CPP14Parser.OperatorFunctionIdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitOperatorfunctionid(CPP14Parser.OperatorfunctionidContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLiteralOperatorId(CPP14Parser.LiteralOperatorIdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLiteraloperatorid(CPP14Parser.LiteraloperatoridContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTemplateDeclaration(CPP14Parser.TemplateDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTemplatedeclaration(CPP14Parser.TemplatedeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTemplateparameterList(CPP14Parser.TemplateparameterListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTemplateparameterlist(CPP14Parser.TemplateparameterlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTemplateParameter(CPP14Parser.TemplateParameterContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTemplateparameter(CPP14Parser.TemplateparameterContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeParameter(CPP14Parser.TypeParameterContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeparameter(CPP14Parser.TypeparameterContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSimpleTemplateId(CPP14Parser.SimpleTemplateIdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSimpletemplateid(CPP14Parser.SimpletemplateidContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTemplateId(CPP14Parser.TemplateIdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTemplateid(CPP14Parser.TemplateidContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTemplateName(CPP14Parser.TemplateNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTemplatename(CPP14Parser.TemplatenameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTemplateArgumentList(CPP14Parser.TemplateArgumentListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTemplateargumentlist(CPP14Parser.TemplateargumentlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTemplateArgument(CPP14Parser.TemplateArgumentContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTemplateargument(CPP14Parser.TemplateargumentContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeNameSpecifier(CPP14Parser.TypeNameSpecifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypenamespecifier(CPP14Parser.TypenamespecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExplicitInstantiation(CPP14Parser.ExplicitInstantiationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExplicitinstantiation(CPP14Parser.ExplicitinstantiationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExplicitSpecialization(CPP14Parser.ExplicitSpecializationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExplicitspecialization(CPP14Parser.ExplicitspecializationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTryBlock(CPP14Parser.TryBlockContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTryblock(CPP14Parser.TryblockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFunctionTryBlock(CPP14Parser.FunctionTryBlockContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFunctiontryblock(CPP14Parser.FunctiontryblockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitHandlerSeq(CPP14Parser.HandlerSeqContext ctx) { return visitChildren(ctx); }
+	@Override public T visitHandlerseq(CPP14Parser.HandlerseqContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1298,49 +1340,49 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExceptionDeclaration(CPP14Parser.ExceptionDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExceptiondeclaration(CPP14Parser.ExceptiondeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitThrowExpression(CPP14Parser.ThrowExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitThrowexpression(CPP14Parser.ThrowexpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExceptionSpecification(CPP14Parser.ExceptionSpecificationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExceptionspecification(CPP14Parser.ExceptionspecificationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDynamicExceptionSpecification(CPP14Parser.DynamicExceptionSpecificationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDynamicexceptionspecification(CPP14Parser.DynamicexceptionspecificationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTypeIdList(CPP14Parser.TypeIdListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeidlist(CPP14Parser.TypeidlistContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitNoeExceptSpecification(CPP14Parser.NoeExceptSpecificationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitNoexceptspecification(CPP14Parser.NoexceptspecificationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTheOperator(CPP14Parser.TheOperatorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTheoperator(CPP14Parser.TheoperatorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1348,4 +1390,25 @@ public class CPP14ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imple
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitLiteral(CPP14Parser.LiteralContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitBooleanliteral(CPP14Parser.BooleanliteralContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitPointerliteral(CPP14Parser.PointerliteralContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitUserdefinedliteral(CPP14Parser.UserdefinedliteralContext ctx) { return visitChildren(ctx); }
 }

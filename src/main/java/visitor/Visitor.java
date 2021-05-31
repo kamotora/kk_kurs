@@ -1,16 +1,19 @@
 package visitor;
 
 
+import antlr.CPP14BaseVisitor;
 import antlr.CPP14Parser;
-import antlr.CPP14ParserBaseVisitor;
 import lombok.extern.log4j.Log4j2;
+import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import static antlr.CPP14Lexer.*;
+
 @Log4j2
-public class Visitor extends CPP14ParserBaseVisitor<Node> {
+public class Visitor extends CPP14BaseVisitor<Node> {
 
     private final Map<String, Node> vars = new HashMap<>();
     private String type;
@@ -21,11 +24,11 @@ public class Visitor extends CPP14ParserBaseVisitor<Node> {
     private static final Node falseNode = new Node(TypeLexeme.INT, FALSE);
 
     @Override
-    public Node visitShiftExpression(CPP14Parser.ShiftExpressionContext ctx) {
+    public Node visitShiftexpression(CPP14Parser.ShiftexpressionContext ctx) {
         if (ctx.getChildCount() > 1) {
             log.info(super.visit(ctx.getChild(2)).getText());
         }
-        return super.visitShiftExpression(ctx);
+        return super.visitShiftexpression(ctx);
     }
 
     @Override
@@ -34,34 +37,40 @@ public class Visitor extends CPP14ParserBaseVisitor<Node> {
     }
 
     @Override
-    public Node visitSimpleDeclaration(CPP14Parser.SimpleDeclarationContext ctx) {
+    public Node visitSimpledeclaration(CPP14Parser.SimpledeclarationContext ctx) {
         type = ctx.getChild(0).getText();
-        return super.visitSimpleDeclaration(ctx);
+        return super.visitSimpledeclaration(ctx);
     }
 
     @Override
-    public Node visitInitDeclarator(CPP14Parser.InitDeclaratorContext ctx) {
+    public Node visitInitdeclarator(CPP14Parser.InitdeclaratorContext ctx) {
         String value = "0";
         String name = ctx.getChild(0).getText();
+        TypeLexeme typeLexeme = TypeLexeme.getType(type);
         if (ctx.getChildCount() > 1) {
             Node node = super.visit(ctx.getChild(1));
             value = node.getText();
+            if (node.getType().getId() > typeLexeme.getId() && typeLexeme != TypeLexeme.UNKNOWN)
+                log.warn("Строка: {}, позиция: {}. Приведение типа {} к типу {}. Часть данных может быть утеряна",
+                        ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine(), node.getType(), typeLexeme);
         }
-        TypeLexeme typeLexeme = TypeLexeme.getType(type);
         if (typeLexeme == TypeLexeme.UNKNOWN) {
-            log.error("Неизвестный тип {} переменной {}", type, name);
+            log.error("Строка: {}, позиция: {}. Неизвестный тип {} переменной {}",
+                    ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine(), type, name);
+            System.exit(1);
         }
         Node node = new Node(typeLexeme, value);
         if (vars.get(name) == null) {
             vars.put(name, node);
         } else {
-            log.error("Переменная {} уже определена!", name);
+            log.error("Строка: {}, позиция: {}. Переменная {} уже определена!", ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine(), name);
+            System.exit(1);
         }
-        return super.visitInitDeclarator(ctx);
+        return super.visitInitdeclarator(ctx);
     }
 
     @Override
-    public Node visitSelectionStatement(CPP14Parser.SelectionStatementContext ctx) {
+    public Node visitSelectionstatement(CPP14Parser.SelectionstatementContext ctx) {
         int count = ctx.getChildCount();
         try {
             if (count == 5) {
@@ -82,7 +91,7 @@ public class Visitor extends CPP14ParserBaseVisitor<Node> {
                 }
             }
         } catch (Exception e) {
-            log.error("Невалидный оператор if", e);
+            log.error("Строка: {}, позиция: {}. Невалидный оператор if", e);
             System.exit(1);
         }
         return new Node(TypeLexeme.VOID, "");
@@ -90,21 +99,21 @@ public class Visitor extends CPP14ParserBaseVisitor<Node> {
 
 
     @Override
-    public Node visitIdExpression(CPP14Parser.IdExpressionContext ctx) {
+    public Node visitIdexpression(CPP14Parser.IdexpressionContext ctx) {
         if (vars.get(ctx.getText()) != null) {
             return vars.get(ctx.getText());
         }
-        return super.visitIdExpression(ctx);
+        return super.visitIdexpression(ctx);
     }
 
     @Override
-    public Node visitAdditiveExpression(CPP14Parser.AdditiveExpressionContext ctx) {
+    public Node visitAdditiveexpression(CPP14Parser.AdditiveexpressionContext ctx) {
         if (ctx.getChildCount() == 1) {
             return super.visit(ctx.getChild(0));
         } else {
             Node a = super.visit(ctx.getChild(0));
             Node b = super.visit(ctx.getChild(2));
-            if (ctx.getChild(1).getText().equals("+")) {
+            if (((Token)ctx.getChild(1).getPayload()).getType() == Plus) {
                 return a.add(b);
             } else {
                 return a.sub(b);
@@ -113,13 +122,13 @@ public class Visitor extends CPP14ParserBaseVisitor<Node> {
     }
 
     @Override
-    public Node visitMultiplicativeExpression(CPP14Parser.MultiplicativeExpressionContext ctx) {
+    public Node visitMultiplicativeexpression(CPP14Parser.MultiplicativeexpressionContext ctx) {
         if (ctx.getChildCount() == 1) {
             return super.visit(ctx.getChild(0));
         } else {
             Node a = super.visit(ctx.getChild(0));
             Node b = super.visit(ctx.getChild(2));
-            if (ctx.getChild(1).getText().equals("*")) {
+            if (((Token)ctx.getChild(1).getPayload()).getType() == Star) {
                 return a.mul(b);
             } else {
                 return a.div(b);
@@ -128,52 +137,54 @@ public class Visitor extends CPP14ParserBaseVisitor<Node> {
     }
 
     @Override
-    public Node visitRelationalExpression(CPP14Parser.RelationalExpressionContext ctx) {
+    public Node visitRelationalexpression(CPP14Parser.RelationalexpressionContext ctx) {
         if (ctx.getChildCount() > 1) {
             Node a = super.visit(ctx.getChild(0));
             Node b = super.visit(ctx.getChild(2));
-            switch (ctx.getChild(1).getText()) {
-                case "<=":
+            switch (((Token)ctx.getChild(1).getPayload()).getType()) {
+                case LessEqual:
                     return a.lessEqual(b) ? trueNode : falseNode;
-                case ">=":
+                case GreaterEqual:
                     return a.largerEqual(b) ? trueNode : falseNode;
-                case ">":
+                case Greater:
                     return a.larger(b) ? trueNode : falseNode;
-                case "<":
+                case Less:
                     return a.less(b) ? trueNode : falseNode;
             }
         }
-        return super.visitRelationalExpression(ctx);
+        return super.visitRelationalexpression(ctx);
     }
 
     @Override
-    public Node visitEqualityExpression(CPP14Parser.EqualityExpressionContext ctx) {
+    public Node visitEqualityexpression(CPP14Parser.EqualityexpressionContext ctx) {
         if (ctx.getChildCount() > 1) {
             ParseTree a = ctx.getChild(0);
             ParseTree b = ctx.getChild(2);
-            switch (ctx.getChild(1).getText()) {
-                case "==":
+            switch (((Token)ctx.getChild(1).getPayload()).getType()) {
+                case Equal:
                     return super.visit(a).equal(super.visit(b)) ? trueNode : falseNode;
-                case "!=":
+                case NotEqual:
                     return super.visit(a).notEqual(super.visit(b)) ? trueNode : falseNode;
             }
         }
-        return super.visitEqualityExpression(ctx);
+        return super.visitEqualityexpression(ctx);
     }
 
     @Override
-    public Node visitAssignmentExpression(CPP14Parser.AssignmentExpressionContext ctx) {
+    public Node visitAssignmentexpression(CPP14Parser.AssignmentexpressionContext ctx) {
         if (ctx.getChildCount() > 1) {
             String name = ctx.getChild(0).getText();
             Node node = super.visit(ctx.getChild(2));
             if (vars.get(name) != null) {
                 vars.put(name, node);
             } else {
-                log.error("Переменная {} не определена!", name);
+                log.error("Строка: {}, позиция: {}. Переменная {} не определена!",
+                        ctx.getStart().getLine(), ctx.getStart().getCharPositionInLine(), name);
+                System.exit(1);
             }
             return node;
         } else {
-            return super.visitAssignmentExpression(ctx);
+            return super.visitAssignmentexpression(ctx);
         }
     }
 }

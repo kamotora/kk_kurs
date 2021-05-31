@@ -3,7 +3,6 @@ package visitor;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static java.util.Arrays.asList;
@@ -18,8 +17,8 @@ public enum TypeLexeme {
     VOID(singletonList("void"), -1),
     UNKNOWN(emptyList(), -2);
 
-    private List<String> names;
-    private int id;
+    private final List<String> names;
+    private final int id;
 
     TypeLexeme(List<String> names, int id) {
         this.names = names;
@@ -40,5 +39,9 @@ public enum TypeLexeme {
             return UNKNOWN;
         int max = Integer.max(first.id, second.id);
         return max == first.id ? first : second;
+    }
+
+    public int getId() {
+        return id;
     }
 }
